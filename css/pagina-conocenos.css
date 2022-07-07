@@ -25,8 +25,8 @@
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header rectangulo"
                           "nav nav"
-                          "main sidebar"
-                          "main sidebar2"
+                          "main main"
+                          "sidebar sidebar2"
                           "footer footer";
 }
 
@@ -80,16 +80,26 @@ nav
 main
 {
     grid-area: main;
-    display: flex;
-    align-items: center;
+    background-image: url(../img/conocenos.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
 }
 
     main .article
     {
+        width: 60%;
+        height: auto;
+        background: rgb(7, 9, 52);
         margin: 20px;
         font-size: 25px;
-        text-align: justify;
+        color: #fff;
+        padding: 30px 30px;
+    }
+
+    main p
+    {
+        margin-top: 10px;
     }
 
 .sidebar
@@ -100,6 +110,7 @@ main
     .sidebar img
     {
         width: 100%;
+        height: auto;
     }
 
 .sidebar2
@@ -107,10 +118,23 @@ main
     grid-area: sidebar2;
 }
 
-    .sidebar2 img
+    .contenedor-img
     {
-        width: 100%;
+        display: flex;
+        justify-content: space-around;
     }
+
+    .contenedor-img img
+    {
+        margin-top: 40px;
+        width: 30%;
+    }
+
+    .sidebar2 p
+    {
+        font-size: 25px;
+    }
+
 footer
 {
     grid-area: footer;
@@ -168,14 +192,28 @@ footer
 {
     .container
     {
-        grid-template-areas: "header "
-                              "nav "
-                              "main "
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header"
+                              "nav"
+                              "main"
                               "sidebar"
                               "sidebar2"
                               "footer";
     }
 
+
+
+    main .article
+    {
+        width: auto;
+        height: auto;
+        background: rgb(7, 9, 52);
+        margin: 20px;
+        font-size: 25px;
+        color: #fff;
+        /* padding: 30px 30px; */
+    }
+    
     nav a
     {
         font-size: 10px;
