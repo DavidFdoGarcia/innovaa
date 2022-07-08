@@ -107,6 +107,11 @@ main
         width: 100%;
     }
 
+    main p
+    {
+        font-size: 25px;
+    }
+
 .slider
 {
     grid-area: slider;
